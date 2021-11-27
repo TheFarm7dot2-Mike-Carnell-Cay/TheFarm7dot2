@@ -1,7 +1,11 @@
 package Person;
 
+import java.util.ArrayList;
+
 public abstract class Person implements NoiseMaker, Eater{
     private String name;
+
+    private final ArrayList<Edible> mealsEaten = new ArrayList<Edible>();
 
     public String getName() {
         return name;
@@ -17,5 +21,9 @@ public abstract class Person implements NoiseMaker, Eater{
 
     public void eat(Edible food) {
 
+    }
+
+    public ArrayList<Edible> getMealsEaten() {
+        return mealsEaten;
     }
 }
