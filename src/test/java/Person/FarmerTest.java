@@ -81,4 +81,16 @@ public class FarmerTest {
         //then
         Assert.assertEquals(expected,actual);
     }
+
+    @Test
+    public void testInheritance() {
+        Farmer testFarmer = new Farmer("Froilan");
+        Assert.assertTrue(testFarmer instanceof Person);
+    }
+
+    @Test
+    public void testImplements() {
+        Farmer testFarmer = new Farmer("Froilan");
+        Assert.assertTrue(testFarmer instanceof Botanist);
+    }
 }
