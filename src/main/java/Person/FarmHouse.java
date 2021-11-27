@@ -3,7 +3,7 @@ package Person;
 import java.util.ArrayList;
 
 public class FarmHouse {
-    private final ArrayList<Person> listOfPeople = new ArrayList<Person.Person>();
+    private final ArrayList<Person> listOfPeople = new ArrayList<Person>();
 
     public FarmHouse() {
     }

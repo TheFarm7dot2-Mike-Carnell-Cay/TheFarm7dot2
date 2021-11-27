@@ -7,7 +7,7 @@ public class Froilanda extends Person implements Pilot {
         return "Hello";
     }
 
-    private Froilanda() {
+    public Froilanda() {
         super("Froilanda");
     }
 
