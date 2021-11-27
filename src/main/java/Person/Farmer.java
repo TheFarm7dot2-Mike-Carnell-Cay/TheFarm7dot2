@@ -11,6 +11,7 @@ public class Farmer extends Person implements Botanist, Rider {
         cropRow.getCropRow().add(crop);
     }
 
+
     public String nameNoise() {
         return "Hi There!";
     }
