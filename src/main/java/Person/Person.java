@@ -5,6 +5,10 @@ import java.util.ArrayList;
 public abstract class Person implements NoiseMaker, Eater{
     private String name;
 
+    public Person(String name) {
+        this.name = name;
+    }
+
     private final ArrayList<Edible> mealsEaten = new ArrayList<Edible>();
 
     public String getName() {

@@ -1,5 +1,20 @@
 package Person;
 
-public class Froilan {
+public class Froilan extends Farmer implements Botanist {
+    String name;
 
+    public Froilan(String name) {
+        super(name);
+    }
+    public Froilan() {
+        this.name = "Froilan";
+    }
+
+    public void plant(CropRow cropRow, Crop crop){
+        cropRow.plantCrop(crop);
+    }
+
+//    public void plantRowsOfCrops(Field field) {
+//        //do we need to plant rows?
+//    }
 }

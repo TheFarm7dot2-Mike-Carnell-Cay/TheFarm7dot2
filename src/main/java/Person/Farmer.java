@@ -2,6 +2,9 @@ package Person;
 
 public class Farmer extends Person implements Botanist, Rider {
 
+    public Farmer() {
+    }
+
     public Farmer(String name){
         super(name);
     }
