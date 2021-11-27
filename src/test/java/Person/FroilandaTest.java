@@ -45,10 +45,10 @@ public class FroilandaTest {
     public void testMount() {
         //given
         Froilanda testFroilanda = new Froilanda();
-        Horse testHorse = new Horse();
-        testFroilanda.mount(testHorse);
+        CropDuster testCropDuster = new CropDuster();
+        testFroilanda.mount(testCropDuster);
         //when
-        boolean actual = testHorse.checkIfRiding();
+        boolean actual = testCropDuster.checkIfRiding();
         //then
         Assert.assertTrue(actual);
     }

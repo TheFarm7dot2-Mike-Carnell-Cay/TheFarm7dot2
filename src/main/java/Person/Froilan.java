@@ -6,12 +6,17 @@ public class Froilan extends Farmer implements Botanist {
     public Froilan(String name) {
         super(name);
     }
+
     public Froilan() {
         this.name = "Froilan";
     }
 
     public void plant(CropRow cropRow, Crop crop){
         cropRow.plantCrop(crop);
+    }
+
+    public String makeNoise(){
+        return "Hi my name is Froilan";
     }
 
 //    public void plantRowsOfCrops(Field field) {
