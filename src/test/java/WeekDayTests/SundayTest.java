@@ -6,8 +6,7 @@ import Person.Froilanda;
 import com.zipcodewilmington.froilansfarm.Animals.Egg;
 import com.zipcodewilmington.froilansfarm.Animals.Horse;
 import com.zipcodewilmington.froilansfarm.Animals.Stable;
-import com.zipcodewilmington.froilansfarm.Crops.earCorn;
-import com.zipcodewilmington.froilansfarm.Crops.tomato;
+import com.zipcodewilmington.froilansfarm.Crops.*;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -82,5 +81,21 @@ public class SundayTest {
             //then
             Assert.assertEquals(expected, actual);
         }
+    }
+
+    @Test
+    public void testSundayTask() {
+        //given
+        Froilan testFroilan = new Froilan();
+        CropRow cropRowTest = new CropRow();
+        cropRowTest.addCrop(new CarrotRoot());
+        cropRowTest.addCrop(new TomatoPlant());
+        cropRowTest.addCrop(new Cornstalk());
+        int expected = 20;
+        //when
+        testFroilan.plant(cropRowTest, new TomatoPlant());
+        int actual = cropRowTest.plantSpots.size();
+        //then
+        Assert.assertEquals(expected, actual);
     }
 }
