@@ -50,16 +50,16 @@ public class CropDusterTest {
 
     }
 
-    @Test
-    public void fertilizeCropsTest() {
-        //given
-        CropDuster testCropDuster = new CropDuster();
-        CropRow cropRowTest = new CropRow();
-        //when
-        boolean actual = testCropDuster.fertilizeCrops(cropRowTest);
-        //then
-        Assert.assertEquals(expected, actual);
-    }
+//    @Test
+//    public void fertilizeCropsTest() {
+//        //given
+//        CropDuster testCropDuster = new CropDuster();
+//        CropRow cropRowTest = new CropRow();
+//        //when
+//        boolean actual = testCropDuster.fertilizeCrops(cropRowTest);
+//        //then
+//        Assert.assertEquals(expected, actual);
+//    }
 
 
 }

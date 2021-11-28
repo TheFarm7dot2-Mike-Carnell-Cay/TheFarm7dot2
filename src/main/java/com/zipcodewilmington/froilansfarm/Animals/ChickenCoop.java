@@ -9,6 +9,7 @@ public class ChickenCoop {
     }
 
     public void addChickens(int Chickens){
+        Coop = new Chicken[Chickens];
         for (int i = 0; i < Coop.length; i++) {
             Coop[i] = new Chicken();
         }

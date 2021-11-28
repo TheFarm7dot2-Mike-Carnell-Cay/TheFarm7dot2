@@ -33,6 +33,7 @@ public class Farmer extends Person implements Botanist, Rider {
 
     public void feedAnimals(Eater animalToBeFed, Edible food) {
         //add feed
+        animalToBeFed.eat(food);
     }
 
     public void mount(Rideable rideable) {
