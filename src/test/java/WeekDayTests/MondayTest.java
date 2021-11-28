@@ -3,9 +3,12 @@ package WeekDayTests;
 import Person.Farmer;
 import Person.Froilan;
 import Person.Froilanda;
+import Person.Pilot;
+import Vehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.Animals.Egg;
 import com.zipcodewilmington.froilansfarm.Animals.Horse;
 import com.zipcodewilmington.froilansfarm.Animals.Stable;
+import com.zipcodewilmington.froilansfarm.Crops.Field;
 import com.zipcodewilmington.froilansfarm.Crops.earCorn;
 import com.zipcodewilmington.froilansfarm.Crops.tomato;
 import org.junit.Assert;
@@ -82,5 +85,24 @@ public class MondayTest {
             //then
             Assert.assertEquals(expected, actual);
         }
+    }
+
+    @Test
+    public void testFroilandaMonday() {
+        //given
+        Froilanda testPilot = new Froilanda();
+        CropDuster testCropDuster = new CropDuster();
+        Field testField = new Field();
+        testField.createField(3);
+        testPilot.setFlying(true);
+        testField.setFertilized(true);
+        //when
+        boolean actualPilot = testPilot.isFlying();
+        testCropDuster.fertilizeCrops(testField);
+        boolean actualField = testField.isFertilized();
+
+        //then
+        Assert.assertTrue(actualPilot);
+        Assert.assertTrue(actualField);
     }
 }
