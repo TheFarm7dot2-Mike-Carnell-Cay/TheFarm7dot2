@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
 import Person.Froilan;
+import com.zipcodewilmington.froilansfarm.Crops.Field;
 import org.junit.Test;
 
 /**
@@ -10,6 +11,8 @@ public class MainApplicationTest {
     @Test
     public void EveryDay(){
         Froilan Froilan = new Froilan();
+        Field field = new Field();
+
 
 
     }

@@ -2,7 +2,7 @@ package com.zipcodewilmington.froilansfarm.Crops;
 
 public class TomatoPlant extends Crop{
     public tomato yield() {
-        if(hasBeenHarvested){
+        if(!hasBeenHarvested && isFertilized){
             tomato tomato = new tomato();
             return tomato;
         }

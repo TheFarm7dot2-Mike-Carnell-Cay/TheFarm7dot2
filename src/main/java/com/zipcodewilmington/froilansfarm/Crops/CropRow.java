@@ -4,10 +4,12 @@ import java.util.ArrayList;
 
 public class CropRow extends Crop{
     public ArrayList<Crop> plantSpots = new ArrayList<Crop>();
-    public boolean isFertilized;
+
 
     public void fertilize() {
-        isFertilized = true;
+        for (Crop crop:plantSpots) {
+            crop.Fertilize();
+        }
     }
 
     public void addCrop(Crop crop) {
