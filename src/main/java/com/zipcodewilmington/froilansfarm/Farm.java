@@ -25,5 +25,12 @@ public class Farm {
         horseStables.add(stable);
     }
 
+    public List<Stable> getNumberOfStables() {
+        return horseStables;
+    }
+
+    public List<ChickenCoop> getNumberOfCoops() {
+        return chickenCoops;
+    }
 
 }

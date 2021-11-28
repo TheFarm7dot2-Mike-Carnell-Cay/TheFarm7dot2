@@ -22,5 +22,4 @@ public class Froilan extends Farmer {
         return "Hi my name is Froilan";
     }
 
-
 }

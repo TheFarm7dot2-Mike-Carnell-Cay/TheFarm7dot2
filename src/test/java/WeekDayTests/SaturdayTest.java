@@ -3,11 +3,13 @@ package WeekDayTests;
 import Person.Farmer;
 import Person.Froilan;
 import Person.Froilanda;
+import com.zipcodewilmington.froilansfarm.Animals.ChickenCoop;
 import com.zipcodewilmington.froilansfarm.Animals.Egg;
 import com.zipcodewilmington.froilansfarm.Animals.Horse;
 import com.zipcodewilmington.froilansfarm.Animals.Stable;
 import com.zipcodewilmington.froilansfarm.Crops.earCorn;
 import com.zipcodewilmington.froilansfarm.Crops.tomato;
+import com.zipcodewilmington.froilansfarm.Farm;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -82,5 +84,32 @@ public class SaturdayTest {
             //then
             Assert.assertEquals(expected, actual);
         }
+    }
+
+    @Test
+    public void testCountStable() {
+        //given
+        Farm testFarm = new Farm();
+        Stable testStable = new Stable();
+        int expected = 1;
+        //when
+        testFarm.addHorseStables(testStable);
+        int actual = testFarm.getNumberOfStables().size();
+        //then
+        Assert.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public  void testCountCoop() {
+        //given
+        Farm testFarm = new Farm();
+        ChickenCoop testChickenCoop = new ChickenCoop();
+        int expected = 1;
+        //when
+        testFarm.addChickenCoops(testChickenCoop);
+        int actual = testFarm.getNumberOfCoops().size();
+        //then
+        Assert.assertEquals(expected, actual);
     }
 }
