@@ -18,11 +18,11 @@
 	* `CropRow` can store many `Crop`.
 	* `Field` can store many `CropRow`
 	* `Vehicle` are `NoiseMaker` and `Rideable`
-		* `FarmVehicle` can `operate` on a `Farm`
-			* `Tractor` is a `FarmVehicle` which can `harvest` a `Crop`.
+		* `Vehicle.Vehicle` can `operate` on a `Farm`
+			* `Tractor` is a `Vehicle.Vehicle` which can `harvest` a `Crop`.
 
-		* `Aircraft` are `Vehicle` which can  `fly`
-			* `CropDuster` is a `FarmVehicle` and `Aircraft` which can `fertilize` a `CropRow`
+		* `Vehicle.Aircraft` are `Vehicle` which can  `fly`
+			* `CropDuster` is a `Vehicle.Vehicle` and `Vehicle.Aircraft` which can `fertilize` a `CropRow`
 
 
 	* `Produce` can `yield` an `Edible` object depending on their `hasBeenFertilized` [flag](https://en.wikipedia.org/wiki/Boolean_flag).
@@ -47,8 +47,8 @@
 
 	* 15 `Chicken` across 4 `ChickenCoop`
 	* 10 `Horse` across 3 `Stable`.
-	* 2 `FarmVehicle`
-	* 1 `Aircraft`
+	* 2 `Vehicle.Vehicle`
+	* 1 `Vehicle.Aircraft`
 	* His sister, `Froilanda`, is a `Pilot` who uses a `CropDuster`.
 
 
