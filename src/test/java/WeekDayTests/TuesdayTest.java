@@ -3,9 +3,11 @@ package WeekDayTests;
 import Person.Farmer;
 import Person.Froilan;
 import Person.Froilanda;
+import Vehicle.Tractor;
 import com.zipcodewilmington.froilansfarm.Animals.Egg;
 import com.zipcodewilmington.froilansfarm.Animals.Horse;
 import com.zipcodewilmington.froilansfarm.Animals.Stable;
+import com.zipcodewilmington.froilansfarm.Crops.Cornstalk;
 import com.zipcodewilmington.froilansfarm.Crops.earCorn;
 import com.zipcodewilmington.froilansfarm.Crops.tomato;
 import org.junit.Assert;
@@ -82,5 +84,22 @@ public class TuesdayTest {
             //then
             Assert.assertEquals(expected, actual);
         }
+    }
+
+    @Test
+    public void testFroilanTuesday() {
+        //given
+        Froilan testFroilan = new Froilan();
+        Tractor tractorTest = new Tractor();
+        tractorTest.harvest(new Cornstalk());
+        int expected = 1;
+        testFroilan.mount(tractorTest);
+        tractorTest.setMounted(true);
+        //when
+        boolean actualFroilan = tractorTest.getIsMounted();
+        int actualTractr = tractorTest.getCropHarvested().size();
+        //then
+        Assert.assertTrue(actualFroilan);
+        Assert.assertEquals(expected, actualTractr);
     }
 }
