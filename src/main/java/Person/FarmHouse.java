@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FarmHouse {
+
     private final ArrayList<Person> listOfPeople = new ArrayList<Person>();
 
     public FarmHouse() {
@@ -21,4 +22,5 @@ public class FarmHouse {
     public List<Person> getListOfPeople() {
         return listOfPeople;
     }
+
 }
