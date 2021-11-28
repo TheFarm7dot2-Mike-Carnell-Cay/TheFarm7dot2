@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm;
 
-public abstract class Edible {
+public class Farm {
 }

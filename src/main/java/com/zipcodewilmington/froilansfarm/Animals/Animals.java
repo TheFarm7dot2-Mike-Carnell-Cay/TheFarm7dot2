@@ -1,4 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Animals;
+import Person.Eater;
+import com.zipcodewilmington.froilansfarm.NoiseMaker;
 
-public interface Animals implements NoiseMaker, Eater{
+public interface Animals extends NoiseMaker, Eater {
 }

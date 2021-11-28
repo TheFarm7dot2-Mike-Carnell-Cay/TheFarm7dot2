@@ -1,5 +1,9 @@
 package Person;
 
+import Vehicle.CropDuster;
+import com.zipcodewilmington.froilansfarm.Animals.Horse;
+import com.zipcodewilmington.froilansfarm.Crops.carrot;
+import com.zipcodewilmington.froilansfarm.Crops.tomato;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -48,7 +52,7 @@ public class FroilandaTest {
         CropDuster testCropDuster = new CropDuster();
         testFroilanda.mount(testCropDuster);
         //when
-        boolean actual = testCropDuster.checkIfRiding();
+        boolean actual = testCropDuster.isMounted(testFroilanda);
         //then
         Assert.assertTrue(actual);
     }
@@ -60,7 +64,7 @@ public class FroilandaTest {
         Horse testHorse = new Horse();
         testFroilanda.mount(testHorse);
         //when
-        boolean actual = testHorse.checkIfRiding();
+        boolean actual = testHorse.isMounted(testFroilanda);
         //then
         Assert.assertFalse(actual);
     }
@@ -69,8 +73,8 @@ public class FroilandaTest {
     public void testEat() {
         //given
         Froilanda testFroilanda = new Froilanda();
-        testFroilanda.eat(new Carrot());
-        testFroilanda.eat(new Tomato());
+        testFroilanda.eat(new carrot());
+        testFroilanda.eat(new tomato());
         int expected = 2;
         //when
         int actual = testFroilanda.getMealsEaten().size();
