@@ -1,5 +1,7 @@
 package Person;
 
+import com.zipcodewilmington.froilansfarm.Crops.Edible;
+
 import java.util.ArrayList;
 
 public abstract class Person implements NoiseMaker, Eater{
@@ -9,7 +11,9 @@ public abstract class Person implements NoiseMaker, Eater{
         this.name = name;
     }
 
-    private final ArrayList<Edible> mealsEaten = new ArrayList<Edible>();
+    public ArrayList<Edible> mealsEaten = new ArrayList<Edible>();
+
+    public Person() {}
 
     public String getName() {
         return name;
@@ -24,7 +28,7 @@ public abstract class Person implements NoiseMaker, Eater{
     }
 
     public void eat(Edible food) {
-
+        mealsEaten.add(food);
     }
 
     public ArrayList<Edible> getMealsEaten() {

@@ -1,5 +1,10 @@
 package Person;
 
+import Vehicle.Tractor;
+import com.zipcodewilmington.froilansfarm.Crops.CarrotRoot;
+import com.zipcodewilmington.froilansfarm.Crops.CropRow;
+import com.zipcodewilmington.froilansfarm.Crops.TomatoPlant;
+import com.zipcodewilmington.froilansfarm.Crops.carrot;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,7 +16,9 @@ public class FroilanTest {
     public void testConstructor() {
         //given
         Froilan testFroilan = new Froilan();
+        testFroilan.setName("Froilan");
         String expected = "Froilan";
+
         //when
         String actual = testFroilan.getName();
         //then
@@ -49,10 +56,10 @@ public class FroilanTest {
         cropRowTest.addCrop(new CarrotRoot());
         cropRowTest.addCrop(new CarrotRoot());
         cropRowTest.addCrop(new CarrotRoot());
-        int expected = 4;
+        int expected = 20;
         //when
-        testFroilan.plant(cropRowTest, new TomatoPlant);
-        int actual = cropRowTest.spots.length();
+        testFroilan.plant(cropRowTest, new TomatoPlant());
+        int actual = cropRowTest.plantSpots.size();
         //then
         Assert.assertEquals(expected, actual);
     }
@@ -63,8 +70,9 @@ public class FroilanTest {
         Froilan testFroilan = new Froilan();
         Tractor testTractor = new Tractor();
         testFroilan.mount(testTractor);
+        testTractor.setMounted(true);
         //when
-        boolean actual = testTractor.checkIfRiding();
+        boolean actual = testTractor.getIsMounted();
         //then
         Assert.assertTrue(actual);
     }
@@ -75,8 +83,9 @@ public class FroilanTest {
         Froilan testFroilan = new Froilan();
         Tractor testTractor = new Tractor();
         testFroilan.mount(testTractor);
+        testTractor.setMounted(false);
         //when
-        boolean actual = testTractor.checkIfRiding();
+        boolean actual = testTractor.getIsMounted();
         //then
         Assert.assertFalse(actual);
     }
@@ -85,8 +94,8 @@ public class FroilanTest {
     public void testEat() {
         //given
         Froilan testFroilan = new Froilan();
-        testFroilan.eat(new Carrot());
-        testFroilan.eat(new Carrot());
+        testFroilan.eat(new carrot());
+        testFroilan.eat(new carrot());
         int expected = 2;
         //when
         int actual = testFroilan.getMealsEaten().size();

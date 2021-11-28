@@ -1,26 +1,34 @@
 package Person;
 
+import com.zipcodewilmington.froilansfarm.Crops.Crop;
+import com.zipcodewilmington.froilansfarm.Crops.CropRow;
+import com.zipcodewilmington.froilansfarm.Crops.Edible;
+import com.zipcodewilmington.froilansfarm.Rideable;
+import com.zipcodewilmington.froilansfarm.Rider;
+
 public class Farmer extends Person implements Botanist, Rider {
 
     public Farmer() {
+        super();
     }
 
     public Farmer(String name){
         super(name);
     }
 
+
     public void plant(CropRow cropRow, Crop crop) {
         //plant stuff
-        cropRow.getCropRow().add(crop);
+        cropRow.addCrop(crop);
     }
 
-
-    public String nameNoise() {
+    @Override
+    public String makeNoise() {
         return "Hi There!";
     }
 
     public void eat(Edible food){
-        //add eating
+        mealsEaten.add(food);
     }
 
     public void feedAnimals(Eater animalToBeFed, Edible food) {
@@ -28,11 +36,12 @@ public class Farmer extends Person implements Botanist, Rider {
     }
 
     public void mount(Rideable rideable) {
-        rideable.riding();
+
     }
 
     public void dismount(Rideable rideable) {
-        rideable.endOfRiding;
+
     }
+
 
 }

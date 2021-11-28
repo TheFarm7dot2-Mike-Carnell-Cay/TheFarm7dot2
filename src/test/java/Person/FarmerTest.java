@@ -1,6 +1,8 @@
 package Person;
 
 
+import com.zipcodewilmington.froilansfarm.Animals.Horse;
+import com.zipcodewilmington.froilansfarm.Crops.*;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -36,10 +38,10 @@ public class FarmerTest {
         cropRowTest.addCrop(new TomatoPlant());
         cropRowTest.addCrop(new TomatoPlant());
         cropRowTest.addCrop(new TomatoPlant());
-        int expected = 4;
+        int expected = 20;
         //when
-        testFarmer.plant(cropRowTest, new CarrotRoot);
-        int actual = cropRowTest.spots.length();
+        testFarmer.plant(cropRowTest, new CarrotRoot());
+        int actual = cropRowTest.plantSpots.size();
         //then
         Assert.assertEquals(expected, actual);
 
@@ -51,8 +53,9 @@ public class FarmerTest {
         Farmer testFarmer = new Farmer("Froilan");
         Horse testHorse = new Horse();
         testFarmer.mount(testHorse);
+        testHorse.setMounted(true);
         //when
-        boolean actual = testHorse.checkIfRiding();
+        boolean actual = testHorse.getIsMounted();
         //then
         Assert.assertTrue(actual);
     }
@@ -63,8 +66,9 @@ public class FarmerTest {
         Farmer testFarmer = new Farmer("Froilan");
         Horse testHorse = new Horse();
         testFarmer.mount(testHorse);
+        testHorse.setMounted(false);
         //when
-        boolean actual = testHorse.checkIfRiding();
+        boolean actual = testHorse.getIsMounted();
         //then
         Assert.assertFalse(actual);
     }
@@ -73,8 +77,8 @@ public class FarmerTest {
     public void testEat() {
         //given
         Farmer testFarmer = new Farmer("Froilan");
-        testFarmer.eat(new EarCorn());
-        testFarmer.eat(new Tomato());
+        testFarmer.eat(new earCorn());
+        testFarmer.eat(new tomato());
         int expected = 2;
         //when
         int actual = testFarmer.getMealsEaten().size();

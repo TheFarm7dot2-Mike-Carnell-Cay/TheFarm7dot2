@@ -1,8 +1,9 @@
 package com.zipcodewilmington.froilansfarm;
 
-public interface Rideable {
-boolean isMounted(Rider rider);
-String getName();
+public interface Rideable  {
+boolean isMounted();
+void setMounted(boolean mounted);
+boolean getIsMounted();
 
 }
 

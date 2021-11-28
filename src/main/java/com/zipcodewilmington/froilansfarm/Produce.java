@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm;
 
-public interface Produce {
+import com.zipcodewilmington.froilansfarm.Crops.Edible;
+
+public interface Produce extends Edible {
     Boolean isFertilized = null;
     Boolean hasBeenHarvested = null;
 

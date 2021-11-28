@@ -1,5 +1,8 @@
 package Person;
 
+import com.zipcodewilmington.froilansfarm.Crops.carrot;
+import com.zipcodewilmington.froilansfarm.Crops.earCorn;
+import com.zipcodewilmington.froilansfarm.Crops.tomato;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -10,7 +13,7 @@ public class PersonTest {
     @Test
     public void testSetAndGetName() {
         //given
-        String expectedName = "";
+        String expectedName = "Froilanda";
         Person testPerson = new Farmer(expectedName);
         testPerson.setName("Froilanda");
         //when
@@ -23,9 +26,9 @@ public class PersonTest {
     public void testMealsEaten() {
         //given
         Person testPerson = new Farmer("");
-        testPerson.eat(new EarCorn);
-        testPerson.eat(new Tomato);
-        testPerson.eat(new Carrot);
+        testPerson.eat(new earCorn());
+        testPerson.eat(new tomato());
+        testPerson.eat(new carrot());
         int expected = 3;
         //when
         int actual = testPerson.getMealsEaten().size();
@@ -37,7 +40,7 @@ public class PersonTest {
     public void testMakeNoise() {
         //given
         Person testPerson = new Farmer("Froilan");
-        String expected = "Howdy!";
+        String expected = "Hi There!";
         //when
         String actual = testPerson.makeNoise();
         //given
