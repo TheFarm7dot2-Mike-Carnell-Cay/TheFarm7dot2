@@ -9,6 +9,9 @@ public class Horse implements Animals, Rideable {
     boolean mounted = false;
     int amountEaten = 0;
 
+    public String makeNoise() {
+        return "Neigh!";
+    }
 
     public void eat(Edible food) {
         amountEaten++;

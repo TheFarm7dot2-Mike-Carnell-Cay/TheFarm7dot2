@@ -3,6 +3,7 @@ package WeekDayTests;
 import Person.Farmer;
 import Person.Froilan;
 import Person.Froilanda;
+import com.zipcodewilmington.froilansfarm.Animals.Chicken;
 import com.zipcodewilmington.froilansfarm.Animals.Egg;
 import com.zipcodewilmington.froilansfarm.Animals.Horse;
 import com.zipcodewilmington.froilansfarm.Animals.Stable;
@@ -82,5 +83,28 @@ public class ThursdayTest {
             //then
             Assert.assertEquals(expected, actual);
         }
+    }
+
+    @Test
+    public void testTalkingThursday() {
+        //given
+        Froilan testFroilan = new Froilan();
+        Froilanda testFroilanda = new Froilanda();
+        Chicken testChicken = new Chicken();
+        Horse testHorse = new Horse();
+        String expectedFroilan = "Hi my name is Froilan";
+        String expectedFroilanda = "Hello";
+        String expectedHorse = "Neigh!";
+        String expectedChicken = "Bwack!";
+        //when
+        String actualFroilan = testFroilan.makeNoise();
+        String actualFroilanda = testFroilanda.makeNoise();
+        String actualHorse = testHorse.makeNoise();
+        String actualChicken = testChicken.makeNoise();
+        //then
+        Assert.assertEquals(expectedFroilan, actualFroilan);
+        Assert.assertEquals(expectedFroilanda, actualFroilanda);
+        Assert.assertEquals(expectedHorse, actualHorse);
+        Assert.assertEquals(expectedChicken, actualChicken);
     }
 }
