@@ -1,8 +1,10 @@
 package VehicleTests;
 
+import Person.Froilanda;
 import Vehicle.CropDuster;
 import Vehicle.FarmVehicle;
 import Vehicle.Vehicle;
+import com.zipcodewilmington.froilansfarm.Crops.CropRow;
 import com.zipcodewilmington.froilansfarm.NoiseMaker;
 import org.junit.Assert;
 import org.junit.Test;
@@ -48,6 +50,16 @@ public class CropDusterTest {
 
     }
 
+    @Test
+    public void fertilizeCropsTest() {
+        //given
+        CropDuster testCropDuster = new CropDuster();
+        CropRow cropRowTest = new CropRow();
+        //when
+        boolean actual = testCropDuster.fertilizeCrops(cropRowTest);
+        //then
+        Assert.assertEquals(expected, actual);
+    }
 
 
 }

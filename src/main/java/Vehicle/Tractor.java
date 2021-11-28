@@ -1,26 +1,21 @@
 package Vehicle;
 
+import com.zipcodewilmington.froilansfarm.Crops.Crop;
+import com.zipcodewilmington.froilansfarm.Crops.Edible;
 import com.zipcodewilmington.froilansfarm.Rideable;
-import com.zipcodewilmington.froilansfarm.Rider;
 
-public class Tractor implements FarmVehicle, Vehicle, Rideable {
-    boolean isDismounted;
+import java.util.ArrayList;
+
+public class Tractor extends Crop implements FarmVehicle, Vehicle, Rideable {
+    private ArrayList<Edible> harvestList = new ArrayList<Edible>();
     boolean mounted = false;
 
     public String makeNoise() {
         return "ttrrztrr";
     }
 
-    public void operate() {
-        // operate on field;
-    }
-
-    public boolean isMounted(Rider rider) {
-        return !isDismounted;
-    }
-
-    public String getName() {
-        return null;
+    public void harvest(Crop crop) {
+        harvestList.add(crop);
     }
 
     public boolean isMounted() {
@@ -33,6 +28,14 @@ public class Tractor implements FarmVehicle, Vehicle, Rideable {
 
     public boolean getIsMounted() {
         return mounted;
+    }
+
+    public Edible yield() {
+        return null;
+    }
+
+    public ArrayList<Edible> getCropHarvested() {
+        return harvestList;
     }
 }
 

@@ -4,6 +4,9 @@ import Vehicle.CropDuster;
 import Vehicle.FarmVehicle;
 import Vehicle.Tractor;
 import Vehicle.Vehicle;
+import com.zipcodewilmington.froilansfarm.Crops.Cornstalk;
+import com.zipcodewilmington.froilansfarm.Crops.Crop;
+import com.zipcodewilmington.froilansfarm.Crops.carrot;
 import com.zipcodewilmington.froilansfarm.Rideable;
 import org.junit.Assert;
 import org.junit.Test;
@@ -11,7 +14,16 @@ import org.junit.Test;
 
 public class TractorTest {
 
+    @Test
+    public void harvestTest() {
+        Tractor tractorTest = new Tractor();
+        tractorTest.harvest(new Cornstalk());
+        int expected = 1;
+        int actual = tractorTest.getCropHarvested().size();
 
+        Assert.assertEquals(expected, actual);
+
+    }
     @Test
     public void makeNoise() {
         Tractor tractor = new Tractor();
