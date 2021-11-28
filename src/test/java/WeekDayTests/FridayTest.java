@@ -3,6 +3,7 @@ package WeekDayTests;
 import Person.Farmer;
 import Person.Froilan;
 import Person.Froilanda;
+import Vehicle.CropDuster;
 import Vehicle.Tractor;
 import com.zipcodewilmington.froilansfarm.Animals.Egg;
 import com.zipcodewilmington.froilansfarm.Animals.Horse;
@@ -84,5 +85,20 @@ public class FridayTest {
             //then
             Assert.assertEquals(expected, actual);
         }
+    }
+
+    @Test
+    public void testFridayCheckEquipment() {
+        //given
+        CropDuster testCropDuster = new CropDuster();
+        Tractor testTractor = new Tractor();
+        String expectedCropDuster = "hummmmmmmmm";
+        String expectedTractor = "ttrrztrr";
+        //when
+        String actualCropDuster = testCropDuster.makeNoise();
+        String actualTractor = testTractor.makeNoise();
+        //then
+        Assert.assertEquals(expectedCropDuster, actualCropDuster);
+        Assert.assertEquals(expectedTractor, actualTractor);
     }
 }

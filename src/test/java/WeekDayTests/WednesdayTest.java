@@ -4,6 +4,7 @@ import Person.Farmer;
 import Person.Froilan;
 import Person.Froilanda;
 import com.zipcodewilmington.froilansfarm.Animals.*;
+import com.zipcodewilmington.froilansfarm.Crops.carrot;
 import com.zipcodewilmington.froilansfarm.Crops.earCorn;
 import com.zipcodewilmington.froilansfarm.Crops.tomato;
 import org.junit.Assert;
@@ -86,16 +87,16 @@ public class WednesdayTest {
     public  void testFeedingChicken() {
         //given
         Farmer testFarmer = new Froilan();
-        earCorn testCorn = new earCorn();
+        carrot testCarrot = new carrot();
         ChickenCoop testCoop = new ChickenCoop();
         testCoop.addChickens(15);
         int expected = 3;
         for (int i = 0; i < 15; i++) {
             Chicken testChicken = testCoop.getChicken(i);
             //when
-            testFarmer.feedAnimals(testChicken, testCorn);
-            testFarmer.feedAnimals(testChicken, testCorn);
-            testFarmer.feedAnimals(testChicken, testCorn);
+            testFarmer.feedAnimals(testChicken, testCarrot);
+            testFarmer.feedAnimals(testChicken, testCarrot);
+            testFarmer.feedAnimals(testChicken, testCarrot);
             int actual = testChicken.getFoodEaten();
             //then
             Assert.assertEquals(expected, actual);
