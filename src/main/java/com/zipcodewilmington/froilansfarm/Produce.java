@@ -3,8 +3,8 @@ package com.zipcodewilmington.froilansfarm;
 import com.zipcodewilmington.froilansfarm.Crops.Edible;
 
 public interface Produce extends Edible {
-    Boolean isFertilized = null;
-    Boolean hasBeenHarvested = null;
+    Boolean isFertilized = false;
+    Boolean hasBeenHarvested = false;
 
     public Edible yield();
 }

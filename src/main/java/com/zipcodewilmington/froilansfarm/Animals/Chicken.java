@@ -4,10 +4,16 @@ import com.zipcodewilmington.froilansfarm.Produce;
 
 public class Chicken implements Animals,Produce  {
 
+    int foodEaten = 0;
+
     public void eat(Edible food){
+        foodEaten++;
+    }
+    public int getFoodEaten(){
+        return foodEaten;
     }
 
-    public Edible yield(){
+    public Egg yield(){
         Egg egg = new Egg();
         if(egg.isFertilized){
             return egg;
@@ -15,7 +21,7 @@ public class Chicken implements Animals,Produce  {
         return null;
     }
 
-    public void makeNoise(){
-
+    public String makeNoise(){
+        return "Bwack!";
     }
 }

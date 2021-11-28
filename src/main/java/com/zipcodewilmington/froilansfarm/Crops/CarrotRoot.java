@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Crops;
 
 public class CarrotRoot extends Crop{
-    public Edible yield() {
+    public carrot yield() {
         if(hasBeenHarvested){
             carrot carrot = new carrot();
             return carrot;
