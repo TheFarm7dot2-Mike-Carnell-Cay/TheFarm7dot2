@@ -1,7 +1,8 @@
 package Person;
 
-import com.zipcodewilmington.froilansfarm.Farm;
+import com.zipcodewilmington.froilansfarm.Crops.Field;
+
 
 public interface Pilot {
-    public void fly(Farm farm);
+    public void fly(Field field);
 }
