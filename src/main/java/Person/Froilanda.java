@@ -1,12 +1,12 @@
 package Person;
 
 import com.zipcodewilmington.froilansfarm.Crops.Edible;
-import com.zipcodewilmington.froilansfarm.Farm;
+import com.zipcodewilmington.froilansfarm.Crops.Field;
 import com.zipcodewilmington.froilansfarm.Rideable;
 import com.zipcodewilmington.froilansfarm.Rider;
 
 public class Froilanda extends Person implements Pilot, Rider {
-
+    public boolean isFlying = false;
 
     public String makeNoise() {
         return "Hello";
@@ -16,8 +16,16 @@ public class Froilanda extends Person implements Pilot, Rider {
         super("Froilanda");
     }
 
-    public void fly(Farm farm) {
-        //if check if she ISRIDING and if its an instance of a cropduster
+    public void fly(Field field) {
+        isFlying = true;
+    }
+
+    public boolean isFlying() {
+        return isFlying;
+    }
+
+    public void setFlying(boolean flying) {
+        isFlying = flying;
     }
 
     public void eat(Edible food) {
@@ -31,4 +39,5 @@ public class Froilanda extends Person implements Pilot, Rider {
     public void dismount(Rideable rideable) {
 
     }
+
 }

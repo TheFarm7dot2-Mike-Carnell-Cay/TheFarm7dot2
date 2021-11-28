@@ -2,6 +2,7 @@ package Person;
 
 import Vehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.Animals.Horse;
+import com.zipcodewilmington.froilansfarm.Crops.Field;
 import com.zipcodewilmington.froilansfarm.Crops.carrot;
 import com.zipcodewilmington.froilansfarm.Crops.tomato;
 import org.junit.Assert;
@@ -52,7 +53,6 @@ public class FroilandaTest {
         CropDuster testCropDuster = new CropDuster();
         testFroilanda.mount(testCropDuster);
         testCropDuster.setMounted(true);
-
         //when
         boolean actual = testCropDuster.getIsMounted();
         //then
@@ -85,7 +85,18 @@ public class FroilandaTest {
         Assert.assertEquals(expected,actual);
     }
 
-    //test flying
+    @Test
+    public void testFlying() {
+        //given
+        Froilanda testFroilanda = new Froilanda();
+        CropDuster testCropDuster = new CropDuster();
+        testFroilanda.mount(testCropDuster);
+        testFroilanda.setFlying(true);
+        //when
+        boolean actual = testFroilanda.isFlying();
+        //then
+        Assert.assertTrue(actual);
+    }
 
     @Test
     public void testInheritance() {

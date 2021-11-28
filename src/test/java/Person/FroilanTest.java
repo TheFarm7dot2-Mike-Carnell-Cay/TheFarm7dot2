@@ -103,8 +103,6 @@ public class FroilanTest {
         Assert.assertEquals(expected,actual);
     }
 
-    //test flying
-
     @Test
     public void testInheritance() {
         Froilan testFroilan = new Froilan();
