@@ -1,8 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Crops;
 
 public class TomatoPlant extends Crop{
-    public Edible yield() {
-        if(hasBeenHarvested){
+    public tomato yield() {
+        if(!hasBeenHarvested && isFertilized){
             tomato tomato = new tomato();
             return tomato;
         }

@@ -1,8 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Crops;
 
 public class Cornstalk extends Crop{
-    public Edible yield() {
-        if(hasBeenHarvested){
+    public earCorn yield() {
+        if(!hasBeenHarvested && isFertilized){
             earCorn corn = new earCorn();
             return corn;
         }
