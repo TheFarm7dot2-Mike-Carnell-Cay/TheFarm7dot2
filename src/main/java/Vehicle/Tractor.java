@@ -5,6 +5,7 @@ import com.zipcodewilmington.froilansfarm.Rider;
 
 public class Tractor implements FarmVehicle, Vehicle, Rideable {
     boolean isDismounted;
+    boolean mounted = false;
 
     public String makeNoise() {
         return "ttrrztrr";
@@ -20,6 +21,18 @@ public class Tractor implements FarmVehicle, Vehicle, Rideable {
 
     public String getName() {
         return null;
+    }
+
+    public boolean isMounted() {
+        return false;
+    }
+
+    public void setMounted(boolean mounted) {
+        this.mounted = mounted;
+    }
+
+    public boolean getIsMounted() {
+        return mounted;
     }
 }
 

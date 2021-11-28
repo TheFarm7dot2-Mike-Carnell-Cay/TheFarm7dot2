@@ -16,7 +16,9 @@ public class FroilanTest {
     public void testConstructor() {
         //given
         Froilan testFroilan = new Froilan();
+        testFroilan.setName("Froilan");
         String expected = "Froilan";
+
         //when
         String actual = testFroilan.getName();
         //then
@@ -54,7 +56,7 @@ public class FroilanTest {
         cropRowTest.addCrop(new CarrotRoot());
         cropRowTest.addCrop(new CarrotRoot());
         cropRowTest.addCrop(new CarrotRoot());
-        int expected = 4;
+        int expected = 20;
         //when
         testFroilan.plant(cropRowTest, new TomatoPlant());
         int actual = cropRowTest.plantSpots.size();
@@ -68,8 +70,9 @@ public class FroilanTest {
         Froilan testFroilan = new Froilan();
         Tractor testTractor = new Tractor();
         testFroilan.mount(testTractor);
+        testTractor.setMounted(true);
         //when
-        boolean actual = testTractor.isMounted(testFroilan);
+        boolean actual = testTractor.getIsMounted();
         //then
         Assert.assertTrue(actual);
     }
@@ -80,8 +83,9 @@ public class FroilanTest {
         Froilan testFroilan = new Froilan();
         Tractor testTractor = new Tractor();
         testFroilan.mount(testTractor);
+        testTractor.setMounted(false);
         //when
-        boolean actual = testTractor.isMounted(testFroilan);
+        boolean actual = testTractor.getIsMounted();
         //then
         Assert.assertFalse(actual);
     }

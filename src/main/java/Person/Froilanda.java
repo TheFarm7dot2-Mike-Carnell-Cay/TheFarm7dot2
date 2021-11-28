@@ -7,8 +7,8 @@ import com.zipcodewilmington.froilansfarm.Rider;
 
 public class Froilanda extends Person implements Pilot, Rider {
 
-    //Froilnda USES a cropdustr, so implement class
-    public String nameNoise() {
+
+    public String makeNoise() {
         return "Hello";
     }
 
@@ -21,7 +21,7 @@ public class Froilanda extends Person implements Pilot, Rider {
     }
 
     public void eat(Edible food) {
-
+        mealsEaten.add(food);
     }
 
     public void mount(Rideable rideable) {

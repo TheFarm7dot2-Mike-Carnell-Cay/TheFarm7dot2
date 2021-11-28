@@ -53,8 +53,9 @@ public class FarmerTest {
         Farmer testFarmer = new Farmer("Froilan");
         Horse testHorse = new Horse();
         testFarmer.mount(testHorse);
+        testHorse.setMounted(true);
         //when
-        boolean actual = testHorse.isMounted(testFarmer);
+        boolean actual = testHorse.getIsMounted();
         //then
         Assert.assertTrue(actual);
     }
@@ -65,8 +66,9 @@ public class FarmerTest {
         Farmer testFarmer = new Farmer("Froilan");
         Horse testHorse = new Horse();
         testFarmer.mount(testHorse);
+        testHorse.setMounted(false);
         //when
-        boolean actual = testHorse.isMounted(testFarmer);
+        boolean actual = testHorse.getIsMounted();
         //then
         Assert.assertFalse(actual);
     }

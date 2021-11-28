@@ -51,8 +51,10 @@ public class FroilandaTest {
         Froilanda testFroilanda = new Froilanda();
         CropDuster testCropDuster = new CropDuster();
         testFroilanda.mount(testCropDuster);
+        testCropDuster.setMounted(true);
+
         //when
-        boolean actual = testCropDuster.isMounted(testFroilanda);
+        boolean actual = testCropDuster.getIsMounted();
         //then
         Assert.assertTrue(actual);
     }
@@ -61,10 +63,11 @@ public class FroilandaTest {
     public void testDismount() {
         //given
         Froilanda testFroilanda = new Froilanda();
-        Horse testHorse = new Horse();
-        testFroilanda.mount(testHorse);
+        CropDuster testCropDuster = new CropDuster();
+        testFroilanda.mount(testCropDuster);
+        testCropDuster.setMounted(false);
         //when
-        boolean actual = testHorse.isMounted(testFroilanda);
+        boolean actual = testCropDuster.getIsMounted();
         //then
         Assert.assertFalse(actual);
     }

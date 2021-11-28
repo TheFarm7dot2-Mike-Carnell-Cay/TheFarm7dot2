@@ -13,7 +13,7 @@ public class PersonTest {
     @Test
     public void testSetAndGetName() {
         //given
-        String expectedName = "";
+        String expectedName = "Froilanda";
         Person testPerson = new Farmer(expectedName);
         testPerson.setName("Froilanda");
         //when
@@ -40,7 +40,7 @@ public class PersonTest {
     public void testMakeNoise() {
         //given
         Person testPerson = new Farmer("Froilan");
-        String expected = "Howdy!";
+        String expected = "Hi There!";
         //when
         String actual = testPerson.makeNoise();
         //given

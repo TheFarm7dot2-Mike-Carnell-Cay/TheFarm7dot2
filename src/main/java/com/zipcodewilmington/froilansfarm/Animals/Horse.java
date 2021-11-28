@@ -5,14 +5,23 @@ import com.zipcodewilmington.froilansfarm.Rideable;
 import com.zipcodewilmington.froilansfarm.Rider;
 
 public class Horse implements Animals, Rideable {
+    Rider rider;
+    boolean mounted = false;
+
 
     public void eat(Edible food) {
 
     }
 
-    public boolean isMounted(Rider rider) {
-
-        return !isDismounted;
+    public void setMounted(boolean mounted) {
+        this.mounted = mounted;
     }
 
+    public boolean isMounted() {
+        return false;
+    }
+
+    public boolean getIsMounted() {
+        return mounted;
+    }
 }
